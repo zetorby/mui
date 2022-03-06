@@ -1,0 +1,70 @@
+@import "lib/styles/variables";
+
+.mui-button {
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  min-height: 42px;
+  padding: 10px 23px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  border-radius: 999px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &--full {
+    width: 100%;
+  }
+
+  &--primary {
+    background: linear-gradient(85.13deg, $button-start -8.05%, $button-end 162.8%);
+    box-shadow: 0 2px 10px rgba(235, 147, 48, 0.3);
+
+    &:hover {
+      transition: 0.3s;
+      background: linear-gradient(85.13deg, $button-hover-start -8.05%, $button-hover-end 162.8%);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background: $gray1;
+      box-shadow: none;
+    }
+  }
+
+  &--second {
+    background: $gray1;
+    box-shadow: 0 2px 10px rgba(235, 147, 48, 0.3);
+
+    &:hover {
+      transition: 0.3s;
+      &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background: rgba(37, 35, 33, 0.1);
+        border-radius: 20px;
+        z-index: 1;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background: $gray1;
+      box-shadow: none;
+    }
+  }
+
+  &--text {
+
+  }
+}

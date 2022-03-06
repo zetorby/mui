@@ -1,0 +1,98 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react-hooks", "import"],
+  "extends": ["airbnb-typescript", "plugin:prettier/recommended", "plugin:@typescript-eslint/recommended"],
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    // Make prettier code formatting suggestions more verbose.
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "lf"
+      }
+    ],
+    // Disable <Fragment> => <> replacement. Feel free to change
+    "react/jsx-fragments": "off",
+    // Disable prefer default export
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/object-curly-spacing": "off",
+    "react/jsx-filename-extension": [0],
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/display-name": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/default-param-last": "off",
+    "import/no-cycle": 1,
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "lodash",
+            "group": "external"
+          },
+          {
+            "pattern": "components/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "utils/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "store/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "hooks",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "hooks/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "*.+(css|sass|less|scss|pcss|styl)*(?*)",
+            "patternOptions": {
+              "dot": true,
+              "nocomment": true,
+              "matchBase": true
+            },
+            "group": "unknown",
+            "position": "after"
+          }
+        ],
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "unknown"],
+        "pathGroupsExcludedImportTypes": ["react"]
+      }
+    ],
+    "import/no-duplicates": "error"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "ecmaVersion": 12,
+        "project": ["./tsconfig.json"]
+      }
+    }
+  ]
+}

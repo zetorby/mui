@@ -14,10 +14,11 @@
     "declarationDir": "dist"
   },
   "include": [
-    "stories"
-  ]
-  // "exclude": [
-  //   "node_modules",
-  //   "dist"
-  // ]
+    "stories",
+    "lib"
+  ],
+   "exclude": [
+     "node_modules",
+     "dist"
+   ]
 }
