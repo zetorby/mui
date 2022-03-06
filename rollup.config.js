@@ -17,5 +17,5 @@ export default {
         typescript(),
         scss(),
     ],
-    exclude: ['node_modules/**', 'stories']
+    exclude: ['node_modules/**', 'stories/**']
 }
