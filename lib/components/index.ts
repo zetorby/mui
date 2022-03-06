@@ -1,4 +1,4 @@
 import { Button } from './button';
 import { TextField } from './textField';
 
-export { Button, TextField };
+export default { Button, TextField };
