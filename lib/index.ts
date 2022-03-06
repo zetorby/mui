@@ -1,4 +1,5 @@
-import * as components from './components';
-import * as utils from './utils';
+export { default as Button } from './components/button';
+export * from './components/button';
 
-export default { components, utils };
+export { default as TextField } from './components/textField';
+export * from './components/textField';
